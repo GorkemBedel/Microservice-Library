@@ -6,9 +6,11 @@ import com.kitaplık.libraryservice.dto.LibraryDto;
 import com.kitaplık.libraryservice.exception.LibraryNotFoundException;
 import com.kitaplık.libraryservice.model.Library;
 import com.kitaplık.libraryservice.repository.LibraryRepository;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
@@ -16,11 +18,14 @@ public class LibraryService {
 
     private final LibraryRepository libraryRepository;
     private final BookServiceClient bookServiceClient;
+    private final Environment environment;
 
-    public LibraryService(LibraryRepository libraryRepository, BookServiceClient bookServiceClient) {
+    public LibraryService(LibraryRepository libraryRepository, BookServiceClient bookServiceClient, Environment environment) {
         this.libraryRepository = libraryRepository;
         this.bookServiceClient = bookServiceClient;
+        this.environment = environment;
     }
+
 
 
     public LibraryDto getAllBooksInLibraryById(String id){
@@ -35,7 +40,7 @@ public class LibraryService {
 
     public LibraryDto createLibrary(){
         Library newLibrary = libraryRepository.save(new Library());
-        return new LibraryDto(newLibrary.getId());
+        return new LibraryDto(newLibrary.getId(), List.of(),environment.getProperty("local.server.port"));
     }
 
     public void addBookToLibrary(AddBookRequest request){
@@ -49,4 +54,10 @@ public class LibraryService {
     }
 
 
+    public List<String> getAllLibraries() {
+        return libraryRepository.findAll()
+                .stream()
+                .map(library -> library.getId())
+                .collect(Collectors.toList());
+    }
 }
