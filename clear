@@ -1,0 +1,29 @@
+[33mcommit 8573f887931a76a3fef65c1bff29bb1219980e0d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: GorkemBedel <117198668+GorkemBedel@users.noreply.github.com>
+Date:   Thu Sep 19 21:15:54 2024 +0300
+
+    Vault added
+
+[33mcommit 2dd760accfd9431de6fad8e5c40b7d95e1e0b7d5[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: GorkemBedel <117198668+GorkemBedel@users.noreply.github.com>
+Date:   Sun Sep 15 23:47:02 2024 +0300
+
+    a
+
+[33mcommit b8447a7f3dd6f1374c5a031f312f9b947e8cb1e3[m
+Author: Görkem Bedel <gorkem_bedel@hotmail.com>
+Date:   Sun Sep 15 23:13:06 2024 +0300
+
+    Zipkin is added for distributed log trace
+
+[33mcommit 3819a0d85cf08ac761356799fa3d0fcdb1a6dbe2[m
+Author: GorkemBedel <117198668+GorkemBedel@users.noreply.github.com>
+Date:   Tue Aug 27 16:44:22 2024 +0300
+
+    Second Commit - Gateway added
+
+[33mcommit aff1213e769d16bc02c652a85382962314c1ac0d[m
+Author: Görkem Bedel <gorkem_bedel@hotmail.com>
+Date:   Sun Aug 25 14:21:31 2024 +0300
+
+    First Commit
