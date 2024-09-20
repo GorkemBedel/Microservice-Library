@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/library-service/library-service/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/kitaplik-common/kitaplik-common/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
